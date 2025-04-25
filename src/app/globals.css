@@ -1,19 +1,107 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+@theme {
+  /* 🎨 Colores */
+  --color-neutralWhite: #F9FAFB;    /* Fondo de página */
+  --color-darkBlue: #111827;        /* Títulos fuertes, texto principal */
+  --color-esmerald: #10B981;        /* Acento: botones secundarios, highlights */
+
+  --color-brand: #3B82F6;           /* Primario: botones, enlaces, CTA */
+  --color-lightBrand: #60A5FA;      /* Hover, gradientes suaves */
+  --color-darkBrand: #2563EB;       /* Hover fuerte, foco, borde activo */
+
+  --color-thinGray: #F3F4F6;        /* Fondo de tarjetas, secciones claras */
+  --color-lightGray: #E5E7EB;       /* Borde leve, inputs, tablas */
+  --color-regularGray: #D1D5DB;     /* Divider, fondo de placeholders */
+  --color-mediumGray: #6B7280;      /* Texto secundario, iconos */     
+
+  /* 📏 Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-smx: 440px;
+
+  /* 🖋 Fuentes */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-mono: 'Inter', sans-serif;
+}
+
+/* 🖋 Font Face - Poppins */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables base */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-neutralWhite);
+  --foreground: var(--color-neutralWhite);
+  --font-poppins: 'Poppins', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
+/*  Estilos generales */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
+}
+
+code, pre {
+  font-family: var(--font-mono);
 }
