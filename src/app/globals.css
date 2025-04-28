@@ -6,14 +6,20 @@
   --color-darkBlue: #111827;        /* Títulos fuertes, texto principal */
   --color-esmerald: #10B981;        /* Acento: botones secundarios, highlights */
 
-  --color-brand: #3B82F6;           /* Primario: botones, enlaces, CTA */
-  --color-lightBrand: #60A5FA;      /* Hover, gradientes suaves */
-  --color-darkBrand: #2563EB;       /* Hover fuerte, foco, borde activo */
+  --color-thinBrand: #E0F2FE;
+  --color-extraLightBrand: #90CDFE;
+  --color-lightBrand: #60A5FA;
+  --color-regularBrand: #3B82F6;
+  --color-darkBrand: #2563EB;
+  --color-extraDarkBrand: #1E3A8A;
 
-  --color-thinGray: #F3F4F6;        /* Fondo de tarjetas, secciones claras */
-  --color-lightGray: #E5E7EB;       /* Borde leve, inputs, tablas */
-  --color-regularGray: #D1D5DB;     /* Divider, fondo de placeholders */
-  --color-mediumGray: #6B7280;      /* Texto secundario, iconos */     
+  /* 🎨 Grises - Gray Escalado Mejor */
+  --color-thinGray: #F1F5F9;
+  --color-extraLightGray: #E2E8F0;
+  --color-lightGray: #CBD5E1;
+  --color-regularGray: #94A3B8;
+  --color-darkGray: #64748B;
+  --color-extraDarkGray: #1E293B;
 
   /* 📏 Breakpoints */
   --breakpoint-xs: 320px;
@@ -104,4 +110,15 @@ body {
 
 code, pre {
   font-family: var(--font-mono);
+}
+
+
+.animate-dropdown {
+  transform-origin: top;
+  animation: dropdown 0.2s ease-out;
+}
+
+@keyframes dropdown {
+  0% { transform: scaleY(0); opacity: 0; }
+  100% { transform: scaleY(1); opacity: 1; }
 }

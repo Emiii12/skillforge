@@ -10,8 +10,8 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   classNameContainer = ''
 }) => {
   return (
-    <section className={`w-full ${classNameContainer}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`w-full ${classNameContainer} z-10`}>
+      <div className="max-w-7xl mx-auto px-4">
         {children}
       </div>
     </section>
