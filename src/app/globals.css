@@ -112,13 +112,7 @@ code, pre {
   font-family: var(--font-mono);
 }
 
-
-.animate-dropdown {
-  transform-origin: top;
-  animation: dropdown 0.2s ease-out;
-}
-
-@keyframes dropdown {
-  0% { transform: scaleY(0); opacity: 0; }
-  100% { transform: scaleY(1); opacity: 1; }
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 95%, rgba(0,0,0,0));
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 95%, rgba(0,0,0,0));
 }

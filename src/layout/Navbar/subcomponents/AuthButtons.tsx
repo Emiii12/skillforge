@@ -13,10 +13,10 @@ export const AuthDropdown = () => {
       classNameDrop='right-0 top-full w-full md:w-[500px] lg:w-[860px]'
     >
       <div className='flex flex-col p-4 gap-2'>
-				<ButtonVariant variant="secondary" fullWidth>
+				<ButtonVariant variant="secondary" fullWidth className='py-2 px-4 '>
           Iniciar Sesión
         </ButtonVariant>
-        <ButtonVariant variant="primary" fullWidth>
+        <ButtonVariant variant="primary" fullWidth className='py-2 px-4 '>
           Registrarse
         </ButtonVariant>
       </div>
@@ -28,10 +28,10 @@ export const AuthDropdown = () => {
 export const AuthNavbar = () => {
   return (
     <div className='flex gap-2'>
-      <ButtonVariant variant="secondary" className='text-sm lg:text-base' >
+      <ButtonVariant variant="secondary" className='text-sm lg:text-base py-2 px-4 ' >
         Iniciar Sesión
       </ButtonVariant>
-      <ButtonVariant variant="primary" className='text-sm lg:text-base'>
+      <ButtonVariant variant="primary" className='text-sm lg:text-base py-2 px-4 '>
         Registrarse
       </ButtonVariant>
     </div>

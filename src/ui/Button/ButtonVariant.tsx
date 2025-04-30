@@ -26,7 +26,7 @@ export const ButtonVariant: React.FC<ButtonProps> = ({
   disabled = false,
   fullWidth = false
 }) => {
-  const baseStyles = 'py-2 px-4 text-center rounded-md font-semibold transition-all duration-150 cursor-pointer text-nowrap';
+  const baseStyles = 'text-center rounded-md font-semibold transition-all duration-150 cursor-pointer text-nowrap';
   
   const variants = {
     primary: 'bg-darkBrand text-neutralWhite hover:bg-extraDarkBrand hover:shadow-md',

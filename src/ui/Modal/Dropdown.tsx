@@ -28,7 +28,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   const isOpen = activeDropdown === id;
 
   return (
-    <div className="md:relative lg:mb-1">
+    <div className="md:relative mb-1">
       <button
         onClick={() => toggleDropdown(id)}
         className="flex items-center gap-2 text-extraDarkBrand font-semibold text-base hover:text-brand transition cursor-pointer"
