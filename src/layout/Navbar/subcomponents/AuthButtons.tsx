@@ -1,22 +1,52 @@
+'use client';
 import React from 'react';
 import { Dropdown } from '@/ui/Modal/Dropdown';
-import { Bars3Icon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon  } from '@heroicons/react/24/outline';
 import { ButtonVariant } from '@/ui/Button/ButtonVariant';
+import { useAppContext } from '@/context/AppContext';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export const AuthDropdown = () => {
+  const { activeDropdown } = useAppContext();
+  const isOpen = activeDropdown === 'mobile-menu';
+
   return (
     <Dropdown 
       id="mobile-menu"
       isSelect={false} 
       label="" 
-      icon={<Bars3Icon className="size-6 sm:size-7 text-extraDarkBrand" />}
+      icon={
+        <AnimatePresence mode="wait">
+          {isOpen ? (
+            <motion.div
+              key="x-icon"
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: 90 }}
+              transition={{ duration: 0.1 }}
+            >
+              <XMarkIcon className="size-6 sm:size-7 text-extraDarkBrand" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="bars-icon"
+              initial={{ opacity: 0, rotate: 90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: -90 }}
+              transition={{ duration: 0.1 }}
+            >
+              <Bars3Icon className="size-6 sm:size-7 text-extraDarkBrand" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      }
       classNameDrop='right-0 top-full w-full md:w-[500px] lg:w-[860px]'
     >
       <div className='flex flex-col p-4 gap-2'>
-				<ButtonVariant variant="secondary" fullWidth className='py-2 px-4 '>
+        <ButtonVariant variant="secondary" fullWidth className='py-2 px-4'>
           Iniciar Sesión
         </ButtonVariant>
-        <ButtonVariant variant="primary" fullWidth className='py-2 px-4 '>
+        <ButtonVariant variant="primary" fullWidth className='py-2 px-4'>
           Registrarse
         </ButtonVariant>
       </div>

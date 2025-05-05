@@ -116,3 +116,16 @@ code, pre {
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 95%, rgba(0,0,0,0));
   mask-image: linear-gradient(to right, rgba(0,0,0,1) 95%, rgba(0,0,0,0));
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-left {
+  animation: scroll-left 20s linear infinite;
+}

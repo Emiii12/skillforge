@@ -46,10 +46,11 @@ export const Dropdown: React.FC<DropdownProps> = ({
             animate={{ opacity: 1, scaleY: 1 }}
             exit={{ opacity: 0, scaleY: 0 }}
             transition={{ duration: 0.2 }}
-            className={`absolute bg-white shadow-xl border-2 border-extraLightGray md:rounded-lg z-50 origin-top md:mt-2 ${classNameDrop}`}
+            className={`absolute bg-white shadow-xl border-2 border-extraLightGray md:rounded-lg z-50 origin-top md:mt-2 max-h-screen overflow-y-auto ${classNameDrop}`}
           >
             {children}
           </motion.div>
+          
         )}
       </AnimatePresence>
     </div>

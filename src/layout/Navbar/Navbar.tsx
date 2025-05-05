@@ -19,12 +19,6 @@ const Navbar = () => {
           <div className='max-md:hidden'>
             <AuthNavbar />
           </div>
-          <div className='max-lg:hidden'>
-            {/* <NavbarItems /> */}
-          </div>
-          <div className='max-lg:hidden'>
-            {/* <SelectLanguage /> */}
-          </div>
         </header>
       </div>
     </>
